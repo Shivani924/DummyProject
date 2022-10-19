@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DummyProject.Migrations
 {
     [DbContext(typeof(LoginContext))]
-    [Migration("20221018112945_initi")]
-    partial class initi
+    [Migration("20221019072428_initii")]
+    partial class initii
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -108,15 +108,9 @@ namespace DummyProject.Migrations
                     b.Property<string>("Username")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<byte[]>("Key")
-                        .HasColumnType("varbinary(max)");
-
                     b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<byte[]>("PasswordHash")
-                        .HasColumnType("varbinary(max)");
 
                     b.Property<string>("Role")
                         .IsRequired()

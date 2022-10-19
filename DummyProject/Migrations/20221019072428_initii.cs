@@ -1,11 +1,10 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
 namespace DummyProject.Migrations
 {
-    public partial class initi : Migration
+    public partial class initii : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -14,8 +13,6 @@ namespace DummyProject.Migrations
                 columns: table => new
                 {
                     Username = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    PasswordHash = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
-                    Key = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Role = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
@@ -95,13 +92,13 @@ namespace DummyProject.Migrations
 
             migrationBuilder.InsertData(
                 table: "Logins",
-                columns: new[] { "Username", "Key", "Password", "PasswordHash", "Role" },
-                values: new object[] { "Admin123", null, "abcde", null, "admin" });
+                columns: new[] { "Username", "Password", "Role" },
+                values: new object[] { "Admin123", "abcde", "admin" });
 
             migrationBuilder.InsertData(
                 table: "Logins",
-                columns: new[] { "Username", "Key", "Password", "PasswordHash", "Role" },
-                values: new object[] { "user123", null, "abcd", null, "user" });
+                columns: new[] { "Username", "Password", "Role" },
+                values: new object[] { "user123", "abcd", "user" });
 
             migrationBuilder.InsertData(
                 table: "Customers",

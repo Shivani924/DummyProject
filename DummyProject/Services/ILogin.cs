@@ -4,7 +4,7 @@ namespace DummyProject.Services
 {
     public interface ILogin
     {
-        LoginDTO Login(LoginDTO user);
-        LoginDTO Register(LoginPassDTO user);
+        Login Login(Login user);
+        Login Register(Login user);
     }
 }

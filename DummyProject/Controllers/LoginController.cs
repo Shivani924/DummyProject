@@ -17,7 +17,7 @@ namespace DummyProject.Controllers
         }
         [HttpPost]
         [Route("Login")]
-        public ActionResult Login(LoginDTO userDTO)
+        public ActionResult Login(Login userDTO)
         {
             var result = _loginService.Login(userDTO);
             if (result != null)
@@ -26,7 +26,7 @@ namespace DummyProject.Controllers
         }
         [HttpPost]
         [Route("Register")]
-        public ActionResult Register(LoginPassDTO user)
+        public ActionResult Register(Login user)
         {
             var result = _loginService.Register(user);
             if (result != null)
