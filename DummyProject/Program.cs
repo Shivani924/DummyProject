@@ -33,6 +33,8 @@ builder.Services.AddDbContext<LoginContext>(options =>
 builder.Services.AddScoped<ILogin, LoginService>();
 builder.Services.AddScoped<IToken, TokenService>();
 builder.Services.AddScoped<IRepo<string, Login>, LoginRepo>();
+builder.Services.AddScoped<IRepo<int, Customer>, CustomerDBService>();
+
 
 
 
